@@ -10,10 +10,10 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  public selectedUser = DUMMY_USERS[randomIndex];
+  selectedUser = DUMMY_USERS[randomIndex];
   
   onSelectUser() {
-    console.log('clicked');
+    this.selectedUser = DUMMY_USERS[Math.floor(Math.random() * DUMMY_USERS.length)]
   }
 
   get imagePath() {
